@@ -26,7 +26,7 @@
   --color-tertiary-dark: #4A4A4A;
 
   /* ===== shadow =====  */
-  --color-shadow-dark: var(--color-shadow-dark);
+  --color-shadow-dark: var(--color-tertiary-dark);
   /* ===== red ===== */
   --color-danger-red: #E5322D;
   --color-light-red: #FCE4E4;
