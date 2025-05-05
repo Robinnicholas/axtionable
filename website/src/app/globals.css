@@ -3,10 +3,14 @@
 @theme {
 
   /* FONTS  */
+
+  --font-ibm-plex-mono: var(--font-ibm-plex-mono);
+  --font-inter: var(--font-inter);
+
   /* ===== Font Weights ===== */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
-  --font-weight-bold: 600;
+  --font-weight-bold: 700;
 
 
   /* COLORS  */
@@ -33,4 +37,18 @@
 
   /* ===== Shadows ===== */
   --shadow-dark: 4px 4px 0px 0px var(--color-shadow-dark)
+}
+
+@utility text-9xl {
+  font-size: 7.75rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 108px;
+}
+
+@utility text-7xl {
+  font-size: 4.75rem;
+}
+
+@utility text-5xl {
+  font-size: 3rem;
 }
