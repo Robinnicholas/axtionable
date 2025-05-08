@@ -35,6 +35,8 @@
   --color-success-green: #92EDB8;
   --color-success-green-dark: #1EB15C;
 
+  --breakpoint-lg: 75rem;
+
   /* ===== Shadows ===== */
   --shadow-dark: 4px 4px 0px 0px var(--color-shadow-dark)
 }
