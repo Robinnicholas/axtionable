@@ -54,3 +54,17 @@
 @utility text-5xl {
   font-size: 3rem;
 }
+
+@theme {
+  --animate-marquee: 22s linear 0s infinite marquee;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0px);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
