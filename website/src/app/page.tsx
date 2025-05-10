@@ -1,103 +1,126 @@
-import Image from "next/image";
+import { FlashBadge, OutlineBadge } from "../components/Badge";
+import Button from "../components/Button";
+import { Container } from "../components/Container";
+import Header from "../components/Layout/Header";
+import AboutSection from "../components/Layout/AboutSection";
+import TestimonialCard from "../components/TestimonialCard";
+import Footer from "../components/Layout/Footer";
 
+const testimonials = [
+  {
+    companyImage: {
+      src: "caribou.svg",
+      alt: "Caribou Logo",
+    },
+    socialImage: {
+      src: "linkedin.svg",
+      alt: "Linkedin Logo",
+    },
+    description: "I was skeptical at first, but this job platform exceeded my expectations. The AI-driven job matching system is incredibly accurate, helping me find roles that truly fit my experience and career ambitions. What I love most is how easy it is to apply directly and track my applications."
+  },
+  {
+    companyImage: {
+      src: "caribou.svg",
+      alt: "Caribou Logo",
+    },
+    socialImage: {
+      src: "x.svg",
+      alt: "X Logo",
+    },
+    description: "This platform completely changed my job search! I found the perfect role in just a few weeks. Highly recommended!"
+  },
+  {
+    companyImage: {
+      src: "caribou.svg",
+      alt: "Caribou Logo",
+    },
+    socialImage: {
+      src: "linkedin.svg",
+      alt: "Linkedin Logo",
+    },
+    description: "I was skeptical at first, but this job platform exceeded my expectations. The AI-driven job matching system is incredibly accurate, helping me find roles that truly fit my experience and career ambitions. What I love most is how easy it is to apply directly and track my applications."
+  },
+  {
+    companyImage: {
+      src: "caribou.svg",
+      alt: "Caribou Logo",
+    },
+    socialImage: {
+      src: "x.svg",
+      alt: "X Logo",
+    },
+    description: "This platform completely changed my job search! I found the perfect role in just a few weeks. Highly recommended!"
+  }
+]
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <>
+      <Header />
+      <section className="pt-10 pb-14 md:pb-28 md:pt-16 lg:pb-32 lg:pt-28">
+        <Container>
+          <div>
+            <FlashBadge />
+            <p className="font-inter text-sm mt-2.5 mb-4 md:mt-2 md:mb-8 lg:mb-12">Personalized job matches, real HR <br />
+              connections, and no time wasted - just the <br />
+              right opportunities for you.</p>
+            <h1 className="text-black md:text-7xl font-ibm-plex-mono font-bold text-6xl lg:text-9xl">Discover <br className="md:hidden" /> Jobs <br /> like Never <br className="md:hidden" />
+              <span>before.</span></h1>
+          </div>
+          <div className="mt-12 md:mt-16 lg:mt-24 h-11 md:h-20 bg-amber-200 rounded-4xl flex items-center justify-center">
+            <p>search bar goes here</p>
+          </div>
+          <div className="flex justify-center">
+            <Button className="mt-4 h-8 px-4 md:h-14 md:px-6 lg:h-20 lg:px-8">Get Curated Jobs</Button>
+          </div>
+        </Container>
+      </section>
+      <AboutSection />
+      <section className="relative pb-25 md:pb-32 lg:pb-40">
+        <div className="absolute inset-y-0 right-0 left-[90%] bg-linear-to-r to-white from-white/0 z-10"></div>
+        <div className="absolute inset-y-0 right-[90%] left-0 bg-linear-to-r to-white/0 from-white z-10"></div>
+        <Container>
+          <div className="flex flex-col items-center">
+            <OutlineBadge className="mb-4">Testimonials</OutlineBadge>
+            <p className="font-ibm-plex-mono font-bold text-lg">See why our users love axtionable.</p>
+          </div>
+          </Container>
+          <div className="overflow-x-hidden my-8 md:my-16">
+            <div className="flex gap-9">
+              <ul className="animate-marquee flex flex-row shrink-0 gap-9 justify-between">
+                {testimonials.map((testimonial, idx) => {
+                  return (
+                    <li key={idx} className="shrink-0">
+                      <TestimonialCard
+                        companyImage={testimonial.companyImage}
+                        socialImage={testimonial.socialImage}
+                        description={testimonial.description}
+                      />
+                    </li>
+                  )
+                })}
+              </ul>
+              <ul className="animate-marquee flex flex-row shrink-0 gap-9 justify-between">
+                {testimonials.map((testimonial, idx) => {
+                  return (
+                    <li key={idx} className="shrink-0">
+                      <TestimonialCard
+                        companyImage={testimonial.companyImage}
+                        socialImage={testimonial.socialImage}
+                        description={testimonial.description}
+                      />
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+          </div>
+          <Container>
+          <div className="flex justify-center">
+            <Button className="h-8 px-4 md:h-14 md:px-6">Get Curated Jobs</Button>
+          </div>
+        </Container>
+      </section>
+      <Footer />
+    </>
   );
 }
