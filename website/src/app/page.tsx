@@ -4,6 +4,7 @@ import { Container } from "../components/Container";
 import Header from "../components/Layout/Header";
 import AboutSection from "../components/Layout/AboutSection";
 import TestimonialCard from "../components/TestimonialCard";
+import Footer from "../components/Layout/Footer";
 
 const testimonials = [
   {
@@ -119,6 +120,7 @@ export default function Home() {
           </div>
         </Container>
       </section>
+      <Footer />
     </>
   );
 }
