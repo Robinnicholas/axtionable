@@ -1,6 +1,7 @@
 import React from 'react'
 import { Applied, FullTime, Remote } from '../../components/Badge'
 import Button from '../../components/Button'
+import Input from '@/src/components/Input'
 
 const page = () => {
   return (
@@ -16,6 +17,10 @@ const page = () => {
       <Button size="small">Get Curated Jobs</Button>
       <Button size="medium">Get Curated Jobs</Button>
       <Button size="large">Get Curated Jobs</Button>
+    </div>
+    <div className="flex gap-2 mx-40 my-20">
+      <h2>Input</h2>
+      <Input type='text' label='Name' errorMessage='*This field can’t be empty'/>
     </div>
     </>
   )
