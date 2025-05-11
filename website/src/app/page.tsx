@@ -1,10 +1,8 @@
 import { FlashBadge, OutlineBadge } from "../components/Badge";
 import Button from "../components/Button";
 import { Container } from "../components/Container";
-import Header from "../components/Layout/Header";
 import AboutSection from "../components/Layout/AboutSection";
 import TestimonialCard from "../components/TestimonialCard";
-import Footer from "../components/Layout/Footer";
 
 const testimonials = [
   {
@@ -55,7 +53,6 @@ const testimonials = [
 export default function Home() {
   return (
     <>
-      <Header />
       <section className="pt-10 pb-14 md:pb-28 md:pt-16 lg:pb-32 lg:pt-28">
         <Container>
           <div>
@@ -70,7 +67,7 @@ export default function Home() {
             <p>search bar goes here</p>
           </div>
           <div className="flex justify-center">
-            <Button className="mt-4 h-8 px-4 md:h-14 md:px-6 lg:h-20 lg:px-8">Get Curated Jobs</Button>
+            <Button type="button" className="mt-4 h-8 px-4 md:h-14 md:px-6 lg:h-20 lg:px-8">Get Curated Jobs</Button>
           </div>
         </Container>
       </section>
@@ -116,11 +113,11 @@ export default function Home() {
           </div>
           <Container>
           <div className="flex justify-center">
-            <Button className="h-8 px-4 md:h-14 md:px-6">Get Curated Jobs</Button>
+            <Button type="button" className="h-8 px-4 md:h-14 md:px-6">Get Curated Jobs</Button>
           </div>
         </Container>
       </section>
-      <Footer />
+      
     </>
   );
 }

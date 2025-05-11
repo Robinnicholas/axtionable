@@ -14,9 +14,9 @@ const page = () => {
     </div>
     <div className="flex gap-2 mx-40 my-20">
       <h2>Buttons</h2>
-      <Button size="small">Get Curated Jobs</Button>
-      <Button size="medium">Get Curated Jobs</Button>
-      <Button size="large">Get Curated Jobs</Button>
+      <Button type='button' size="small">Get Curated Jobs</Button>
+      <Button type='button' size="medium">Get Curated Jobs</Button>
+      <Button type='button' size="large">Get Curated Jobs</Button>
     </div>
     <div className="flex gap-2 mx-40 my-20">
       <h2>Input</h2>
